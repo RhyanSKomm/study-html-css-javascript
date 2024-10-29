@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <form class="form" action="">
+            <div class="form-header">
+                <h4>Cadastro de produto</h4>
+            </div>
+    
+            <div class="form-content">
+                <div class="form-input required">    
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" placeholder="Informe o nome" required>
+                </div>
+                
+                <div class="form-input">
+                    <label for="descricao">Descrição</label>
+                    <input type="text" name="descricao" placeholder="Informe a descrição">
+                </div>
+        
+                <div class="form-input required">
+                    <label for="preco">Preço</label>
+                    <input type="number" step="0.01" name="preco" placeholder="Informe o preço" required>
+                </div>
+            </div>
+        
+            <div class="form-action">
+                <!-- <input type="submit"> -->
+                <button type="button" onclick="resgatarDados()">Enviar</button>
+                <button type="button" onclick="limparForm()">Limpar</button>
+            </div>
+        </form>
+    </section>
+    
+    <ul>
+
+    </ul>
+    <script>
+        function limparForm(){
+            console.log('Limpando o formulário')            
+            document.querySelector('input[name=nome]').value = ''
+            document.querySelector('input[name=descricao]').value = ''
+            document.querySelector('input[name=preco]').value = ''
+        }
+
+        function resgatarDados(){
+            const nome = document.querySelector('input[name=nome]').value
+            const desc = document.querySelector('input[name=descricao]').value
+            const preco = document.querySelector('input[name=preco]').value
+            
+            var cont = 0
+            cont += 1
+            
+            document.querySelector('ul').innerHTML += `<li><p>Item${cont}</p><p>${nome}</p><p>${desc}<p><p>${preco}</p></li>`
+            
+            console.log(cont)
+        }
+    </script>
+</body>
+</html>

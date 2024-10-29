@@ -1,0 +1,26 @@
+@import url(reset.css);
+
+h1{
+    text-align: center;
+}
+
+section{
+        margin: 50px 0px;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+}
+
+input[type=text]{
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=number]{
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}

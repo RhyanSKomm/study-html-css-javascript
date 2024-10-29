@@ -1,0 +1,15 @@
+.titulo{
+    text-align: center;
+    color: black;
+}
+
+
+
+.titulo{
+    text-align: right;
+}
+
+#terceiroParagrafo{
+    color: rgb(0, 179, 255);
+    background-color: black;
+}
